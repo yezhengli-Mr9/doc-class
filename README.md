@@ -1,17 +1,22 @@
 # doc-class
 ### Webservice with training, development CSV uploads
 
-I deployed on AWS EC2 (Ubuntu) a webservice with training, development CSV uploads. [Webservice](https://ec2-18-222-104-42.us-east-2.compute.amazonaws.com/) is publicized on [^fn1] A first glimpse look like
+I deployed on AWS EC2 (Ubuntu) a [webservice](https://ec2-18-222-104-42.us-east-2.compute.amazonaws.com/) with training, development CSV uploads[^fn1]. it looks like the following: initially,
+<img src="README_resources/index_origin.png" width="600">
 
+and after uploading DEV/TEST CSV file:
+<img src="README_resources/index_result.png" width="600">
+
+where two confusion matrices should be (and eventually I failed to do so) displayed as <img src="doc_class/app/templates/images/devconfusion.png" width="300"> <img src="doc_class/app/templates/images/confusion.png" width="300">.
 
 ### References
 
 
-[fn1] Li, Yezheng, Mar. 12th-14th, 2018, webservice with training, development CSV uploads, http://ec2-18-222-104-42.us-east-2.compute.amazonaws.com/
+[^fn1] Li, Yezheng, Mar. 12th-14th, 2018, Webservice with training, development CSV uploads, http://ec2-18-222-104-42.us-east-2.compute.amazonaws.com/
 
-[fn2] Thompson, Ben, Mar 2015, Setting Up Flask on AWS, http://bathompso.com/blog/Flask-AWS-Setup/
+[^fn2] Thompson, Ben, Mar 2015, Setting Up Flask on AWS, http://bathompso.com/blog/Flask-AWS-Setup/
 
-[fn3] Long, Pete, July 2017, Nginx Error – 413 Request Entity Too Large, https://www.petenetlive.com/KB/Article/0001325
+[^fn3] Long, Pete, July 2017, Nginx Error – 413 Request Entity Too Large, https://www.petenetlive.com/KB/Article/0001325
 
 ### Initial setup for deployment on AWS EC2 (Ubuntu)
 
