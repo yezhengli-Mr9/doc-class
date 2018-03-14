@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Python and Flask</title>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/app.css') }}">
+</head>
+
+<body>
+<header class="navbar">
+ <span class="navbar-text"> (Optional, we have a pretrained model in the system.) Upload Training CSV. Size of file should not exceed 100 MB.
+  <br/> ( I managed to upload a 271MB one which took much time. The file will be uploaded to corresponding AWS EC2 instance.)
+  </span>
+  <form action="/train" method="post" enctype="multipart/form-data" >
+      <span class="btn btn-default btn-file">
+        Browse <input type="file" name="image">
+      </span>
+
+    <input type="submit" value="Upload your training CSV and wait for the confusion matrix" class="btn btn-primary">
+  </form>
+  </header>
+
+  <p> ------------------------------------------------------------------</p>
+<header class="navbar">
+   <span class="navbar-text"> Please upload DEV CSV (of same type as training CSV). Size of file should not exceed 100 MB. <br/> 
+    ( I managed to upload a 271MB one which took much time. The file will be uploaded to corresponding AWS EC2 instance.)
+<br/>
+  Prediction will be made.
+  </span>
+  <form action="/upload" method="post" enctype="multipart/form-data" >
+      <span class="btn btn-default btn-file">
+        Browse <input type="file" name="image">
+      </span>
+
+    <input type="submit" value="Upload your DEV CSV and wait for the confusion matrix" class="btn btn-primary">
+  </form>
+</header>
+</body>
+</html>
