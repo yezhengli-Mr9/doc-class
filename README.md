@@ -1,7 +1,7 @@
 # doc-class
 ### Webservice with training and DEV/TEST CSV uploads
 
-I deployed on AWS EC2 (Ubuntu) a [webservice](https://ec2-18-222-104-42.us-east-2.compute.amazonaws.com/) with training and DEV/TEST CSV uploads[^fn1]. it initially appears
+I deployed on AWS EC2 (Ubuntu) a [webservice](https://ec2-18-222-104-42.us-east-2.compute.amazonaws.com/) with training and DEV/TEST CSV uploads[^fn1]. It initially appears
 <img src="README_resources/index_origin.png" width="600">
 
 and after uploading DEV/TEST CSV file:
