@@ -7,7 +7,7 @@ I deployed on AWS EC2 (Ubuntu) a [webservice](https://ec2-18-222-104-42.us-east-
 and after uploading DEV/TEST CSV file:
 <img src="README_resources/index_result.png" width="600">
 
-where two confusion matrices should be (and eventually I failed to do so) displayed as: <img src="doc_class/app/templates/images/devconfusion.png" width="300"> <img src="doc_class/app/templates/images/confusion.png" width="300">. A much better (but much slower) model with very promising confusion matrix is discussed below in "Measurement Criteria" section.
+where two confusion matrices should be displayed as (and eventually I failed to display the two due to html's issue of locating images) : <img src="doc_class/app/templates/images/devconfusion.png" width="300"> <img src="doc_class/app/templates/images/confusion.png" width="300">. A much better (but much slower) model with very promising confusion matrix is discussed below in "Measurement Criteria" section.
 
 ### References
 
