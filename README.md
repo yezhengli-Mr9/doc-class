@@ -28,7 +28,27 @@ where two confusion matrices should be (and eventually I failed to do so) displa
     User ubuntu
     Port <span class="m">22</span>
     IdentityFile ~/.ssh/aws.pem</code></pre></figure>
-3.
+
+
+3. Run `ssh aws` to log in and `git clone https://github.com/yezhengli-Mr9/doc-class`.
+4. We use python27 and need several packages: together with `nginx`, `uwsgi` [^fn2], we run
+```
+sudo apt-get update
+sudo apt-get install python-pip
+sudo apt-get install nginx
+sudo apt-get install python-tk
+sudo apt-get install uwsgi-core uwsgi-plugin-python
+pip install --upgrade pip
+pip install matplotlib sklearn scipy flask
+```
+5. In the root (of your EC2 instance), run `sudo cp nginx.conf /etc/nginx/nginx.conf` where `nginx.conf` is updated according to [^tn2, ^tn3]. After this, in order to clean up possible `uwsgi` taking the address localhost:5000 (of the EC2 instance) and restart `nginx`, run 
+```
+uwsgi --stop ~/doc_class/doc_class.pid
+sudo killall -9 uwsgi
+sudo /etc/init.d/nginx restart
+uwsgi ~/doc_class/uwsgi.ini
+```
+6. Finally, in a friendly browser, enter [EC2-IPv4] or the corresponding public DNS http://ec2-???-???-???-???.us-east-2.compute.amazonaws.com. I have already established 18.222.104.42 with corresponding public DNS http://ec2-18-222-104-42.us-east-2.compute.amazonaws.com -- however, as I mentioned in step 1, it is not a free tier, please inform me when you finish reviewing my code and I will stop the current running instance (which later on will change its [EC2-IPv4].
 
 
 
