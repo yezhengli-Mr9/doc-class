@@ -1,4 +1,4 @@
-# doc-class
+# Document classification: a quick start
 ### Webservice with training and DEV/TEST CSV uploads
 
 I deployed on AWS EC2 (Ubuntu) a [webservice](https://ec2-18-222-104-42.us-east-2.compute.amazonaws.com/) with training and DEV/TEST CSV uploads[^fn1]. It initially appears
@@ -18,6 +18,8 @@ where two confusion matrices should be (and eventually I failed to do so) displa
 [^fn3] Long, Pete, July 2017, Nginx Error – 413 Request Entity Too Large, https://www.petenetlive.com/KB/Article/0001325
 
 [^fn4] Shaikh, Javed, July 2017, Machine Learning, NLP: Text Classification using scikit-learn, python and NLTK, https://towardsdatascience.com/machine-learning-nlp-text-classification-using-scikit-learn-python-and-nltk-c52b92a7c73a
+
+# Tutorial: for user and for developer
 ### For user: how to use webservice
 1. In a friendly browser, enter [^fn1].
 2. Since we have pretrained model in the instance, a user can just first upload DEV/TEST CSV (of same format as the original training CSV), the buttons of which appears in the second block of htmls (first block and second block are separated by ------------------------).
