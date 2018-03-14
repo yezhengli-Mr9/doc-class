@@ -9,15 +9,6 @@ and after uploading DEV/TEST CSV file:
 
 where two confusion matrices should be displayed as (and eventually I failed to display the two due to html's issue of locating images) : <img src="doc_class/app/templates/images/devconfusion.png" width="300"> <img src="doc_class/app/templates/images/confusion.png" width="300">. A much better (but much slower) model with very promising confusion matrix is discussed below in "Measurement Criteria" section.
 
-### References
-
-[^fn1] Li, Yezheng, Mar. 12th-14th, 2018, Webservice with training, development CSV uploads, http://ec2-18-222-104-42.us-east-2.compute.amazonaws.com/
-
-[^fn2] Thompson, Ben, Mar 2015, Setting Up Flask on AWS, http://bathompso.com/blog/Flask-AWS-Setup/
-
-[^fn3] Long, Pete, July 2017, Nginx Error – 413 Request Entity Too Large, https://www.petenetlive.com/KB/Article/0001325
-
-[^fn4] Shaikh, Javed, July 2017, Machine Learning, NLP: Text Classification using scikit-learn, python and NLTK, https://towardsdatascience.com/machine-learning-nlp-text-classification-using-scikit-learn-python-and-nltk-c52b92a7c73a
 
 # Tutorial: for user and for developer
 ### For user: how to use webservice
@@ -74,3 +65,14 @@ However, I have a much better but much slower ngram model with confusion matrix 
 1. **Are we able to run your testcases against your webservice? Can we run them against our webservice?** Yes. My test cases are in [doc_class/uploads/](doc_class/uploads/) where for example, `row160.csv` includes leading 160 lines of original csv. Upload specification appears in htmls of my webservice, notice
 - the larger the size, the longer the time to upload (although a 273MB file is uploadable).
 - upload of training CSV is not necessary. If uploaded. CSV file should be big enough to have all labels/ targets appeared: in my test case, at least we have to have `row160.csv`. No corresponding requirements for DEV/TEST CSV, that is, `row10.csv`, `row20.csv`, etc. are fine to be DEV/TEST CSVs.
+
+
+### References
+
+[^fn1] Li, Yezheng, Mar. 12th-14th, 2018, Webservice with training, development CSV uploads, http://ec2-18-222-104-42.us-east-2.compute.amazonaws.com/
+
+[^fn2] Thompson, Ben, Mar 2015, Setting Up Flask on AWS, http://bathompso.com/blog/Flask-AWS-Setup/
+
+[^fn3] Long, Pete, July 2017, Nginx Error – 413 Request Entity Too Large, https://www.petenetlive.com/KB/Article/0001325
+
+[^fn4] Shaikh, Javed, July 2017, Machine Learning, NLP: Text Classification using scikit-learn, python and NLTK, https://towardsdatascience.com/machine-learning-nlp-text-classification-using-scikit-learn-python-and-nltk-c52b92a7c73a
