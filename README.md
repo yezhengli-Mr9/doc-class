@@ -7,7 +7,7 @@ I deployed on AWS EC2 (Ubuntu) a [webservice](https://ec2-18-222-104-42.us-east-
 and after uploading DEV/TEST CSV file:
 <img src="README_resources/index_result.png" width="600">
 
-where two confusion matrices should be (and eventually I failed to do so) displayed as: <img src="doc_class/app/templates/images/devconfusion.png" width="300"> <img src="doc_class/app/templates/images/confusion.png" width="300">
+where two confusion matrices should be (and eventually I failed to do so) displayed as: <img src="doc_class/app/templates/images/devconfusion.png" width="300"> <img src="doc_class/app/templates/images/confusion.png" width="300">. A much better (but much slower) model with very promising confusion matrix is discussed below in "Measurement Criteria" section.
 
 ### References
 
@@ -21,8 +21,14 @@ where two confusion matrices should be (and eventually I failed to do so) displa
 
 ### Initial setup for deployment on AWS EC2 (Ubuntu)
 
-1. Establish a AWS EC2 (Ubuntu) instance following [^fn2] where the only difference is to choose 't2.small' for enough CPU memory.
-2. 
+1. Establish a AWS EC2 (Ubuntu Server 16.04 LTS (HVM), SSD Volume Type) instance following [^fn2] where the only difference is to choose 't2.small' for enough CPU memory (2GiB). Remember to set inbound rules [^fn2]. Denote IPv4 address of the instance by [EC2-IPv4].
+2. Before ssh, it is convenient to edit the ~/.ssh/config (local machine) by adding [^fn2]
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><div class="shell"><pre><span></span>Host aws
+    HostName <span class="m">[EC2-IPv4]</span>
+    User ubuntu
+    Port <span class="m">22</span>
+    IdentityFile ~/.ssh/aws.pem</code></pre></figure>
+3.
 
 
 
@@ -33,7 +39,7 @@ where two confusion matrices should be (and eventually I failed to do so) displa
 1. **Is your hosted model as accurate as ours? Better? (think confusion matrix)** The NB model embedded in my webservice refers to ones in[^fn4] does not have promising confusion matrices:
 <img src="doc_class/app/templates/images/devconfusion.png" width="300"> <img src="doc_class/app/templates/images/confusion.png" width="300">.
 However, I have a much better but much slower ngram model with confusion matrix <img src="README_resources/better_slower_ngramClassifier/confusion.jpg" width="300"> 
- and [original code](README_resources/better_slower_ngramClassifier/Untitled.ipynb) implies not only four-hour development prediction (notice this is ngram model, the most time-consuming part is not the training part), but also a saved python language model more than 600MB (see last cell of [Untitled.ipynb](README_resources/better_slower_ngramClassifier/Untitled.ipynb)).
+ and [original code](README_resources/better_slower_ngramClassifier/Untitled.ipynb) implies not only four-hour development prediction (notice this is ngram model, the most time-consuming part is not the training part), but also a saved python language model more than 579MB (see last cell of [Untitled.ipynb](README_resources/better_slower_ngramClassifier/Untitled.ipynb)).
 1. **Your code, is it understandable, readable and/or deployable?** 
 1. **Do you use industry best practices in training/testing/deploying?** No since I do not know the best practices.
 1. **Do you use modern packages/tools in your code and deployment pipeline like [this](https://stelligent.com/2016/02/08/aws-lambda-functions-aws-codepipeline-cloudformation/)?** I use EC2.
