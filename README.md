@@ -1,13 +1,13 @@
 # doc-class
 ### Webservice with training, development CSV uploads
 
-I deployed on AWS EC2 (Ubuntu) a webservice with training, development CSV uploads. [Webservice](\https://ec2-18-222-104-42.us-east-2.compute.amazonaws.com/) is publicized on [^fn1] A first glimpse look like
+I deployed on AWS EC2 (Ubuntu) a webservice with training, development CSV uploads. [Webservice](https://ec2-18-222-104-42.us-east-2.compute.amazonaws.com/) is publicized on [^fn1] A first glimpse look like
 
 
 ### References
 
 
-[fn1] Li, Yezheng, Mar. 12th-14th, 2018, webservice with training, development CSV uploads, \http://ec2-18-222-104-42.us-east-2.compute.amazonaws.com/
+[fn1] Li, Yezheng, Mar. 12th-14th, 2018, webservice with training, development CSV uploads, http://ec2-18-222-104-42.us-east-2.compute.amazonaws.com/
 
 [fn2] Thompson, Ben, Mar 2015, Setting Up Flask on AWS, http://bathompso.com/blog/Flask-AWS-Setup/
 
