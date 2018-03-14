@@ -1,7 +1,7 @@
 # doc-class
-### Webservice with training, development CSV uploads
+### Webservice with training and DEV/TEST CSV uploads
 
-I deployed on AWS EC2 (Ubuntu) a [webservice](https://ec2-18-222-104-42.us-east-2.compute.amazonaws.com/) with training, development CSV uploads[^fn1]. it initially appears
+I deployed on AWS EC2 (Ubuntu) a [webservice](https://ec2-18-222-104-42.us-east-2.compute.amazonaws.com/) with training and DEV/TEST CSV uploads[^fn1]. it initially appears
 <img src="README_resources/index_origin.png" width="600">
 
 and after uploading DEV/TEST CSV file:
@@ -21,8 +21,8 @@ where two confusion matrices should be (and eventually I failed to do so) displa
 ### For user: how to use webservice
 1. In a friendly browser, enter [^fn1].
 2. Since we have pretrained model in the instance, a user can just first upload DEV/TEST CSV (of same format as the original training CSV), the buttons of which appears in the second block of htmls (first block and second block are separated by ------------------------).
-3. Once the confusion matrices are shown (since I have problem locating local image files by html, they are presented by two same W3schools' image(s) from an online source), you are use newly appeared (four) buttons to download predicted labels and  image for confusion matrix of train/ DEV dataset and DEV/TEST dataset.
-4. If one want to change training CSV (the default pretrained model uses entire original CSV) so as to overwrite the pretained/ previous model, use first block
+3. Once the confusion matrices are shown (since I have problem locating local image files by html, they are presented by two same W3schools' image(s) from an online source), you are use newly appeared (four) buttons to download predicted labels and  image for confusion matrix of training CSV and DEV/TEST CSV.
+4. (Optional) If one want to change training CSV (the default pretrained model uses entire original CSV) so as to overwrite the pretained/ previous model, use first block's two buttons. Notice the training CSV needs to be big enough to include all labels/ targets -- in my testcases, at least we should have `row160.csv`.
 
 ### For developer: initial setup for deployment on AWS EC2 (Ubuntu)
 
