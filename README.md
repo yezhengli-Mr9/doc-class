@@ -18,8 +18,13 @@ where two confusion matrices should be (and eventually I failed to do so) displa
 [^fn3] Long, Pete, July 2017, Nginx Error – 413 Request Entity Too Large, https://www.petenetlive.com/KB/Article/0001325
 
 [^fn4] Shaikh, Javed, July 2017, Machine Learning, NLP: Text Classification using scikit-learn, python and NLTK, https://towardsdatascience.com/machine-learning-nlp-text-classification-using-scikit-learn-python-and-nltk-c52b92a7c73a
+### For user: how to use webservice
+1. In a friendly browser, enter [^fn1].
+2. Since we have pretrained model in the instance, a user can just first upload DEV/TEST CSV (of same format as the original training CSV), the buttons of which appears in the second block of htmls (first block and second block are separated by ------------------------).
+3. Once the confusion matrices are shown (since I have problem locating local image files by html, they are presented by two same W3schools' image(s) from an online source), you are use newly appeared (four) buttons to download predicted labels and  image for confusion matrix of train/ DEV dataset and DEV/TEST dataset.
+4. If one want to change training CSV (the default pretrained model uses entire original CSV) so as to overwrite the pretained/ previous model, use first block
 
-### Initial setup for deployment on AWS EC2 (Ubuntu)
+### For developer: initial setup for deployment on AWS EC2 (Ubuntu)
 
 1. Establish a AWS EC2 (Ubuntu Server 16.04 LTS (HVM), SSD Volume Type) instance following [^fn2] where the only difference is to choose 't2.small' for enough CPU memory (2GiB). Remember to set inbound rules [^fn2]. Denote IPv4 address of the instance by [EC2-IPv4].
 2. Before ssh, it is convenient to edit the ~/.ssh/config (local machine) by adding [^fn2]
