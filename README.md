@@ -40,7 +40,7 @@ In the extreme case you have to contact me to resolve a bug I have not debugged 
 ### For developer: initial setup for deployment on AWS EC2 (Ubuntu)
 
 1. Establish a AWS EC2 (Ubuntu Server 16.04 LTS (HVM), SSD Volume Type) instance following [^fn2] where the only difference is to choose 't2.small' for enough CPU memory (2GiB). Remember to set inbound rules [^fn2]. Denote IPv4 address of the instance by [EC2-IPv4].
-2. Before ssh, it is convenient to edit the ~/.ssh/config (local machine) by adding [^fn2]
+2. Before ssh, it is convenient to edit the `~/.ssh/config` (local machine) by adding [^fn2]
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><div class="shell"><pre><span></span>Host aws
     HostName <span class="m">[EC2-IPv4]</span>
     User ubuntu
@@ -68,7 +68,7 @@ uwsgi ~/doc_class/uwsgi.ini
 ```
 6. Finally, in a friendly browser, enter [^tn1].
 
-7. For debug, debug the system locally before publishing it by AWS.
+7. For debug, debug the system locally (for example, via `ssh -L 5000:localhost:5000 aws`) before publishing it by AWS.
 
 
 
