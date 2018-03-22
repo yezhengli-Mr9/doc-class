@@ -82,7 +82,7 @@ uwsgi ~/doc_class/uwsgi.ini
 <img src="doc_class/app/templates/images/devconfusion0.png" width="300"> <img src="doc_class/app/templates/images/confusion0.png" width="300">
 
 ```diff
-- with overall accuracy ~ 93.8% and original codes
+- with overall accuracy ~ 93.8%, saved classifier of size at most ~20-44MB  and original codes here
 ```
 [trainNB.ipynb](README_resources/NaivBayes_trigram/trainNB.ipynb) and [loadNB.ipynb](README_resources/NaivBayes_trigram/loadNB.ipynb).
 
