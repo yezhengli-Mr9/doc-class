@@ -49,7 +49,7 @@ sudo killall -9 uwsgi
 sudo /etc/init.d/nginx restart
 uwsgi ~/doc_class/uwsgi.ini
 ```
-6. Finally, in a friendly browser, enter [EC2-IPv4] or the corresponding public DNS http://ec2-???-???-???-???.us-east-2.compute.amazonaws.com. I have already established 18.222.104.42 with corresponding public DNS http://ec2-18-222-104-42.us-east-2.compute.amazonaws.com -- however, as I mentioned in step 1, it is not a free tier, please inform me when you finish reviewing my code and I will stop the current running instance (which later on will change its [EC2-IPv4].
+6. Finally, in a friendly browser, enter [^tn1].
 
 
 
@@ -61,7 +61,8 @@ uwsgi ~/doc_class/uwsgi.ini
 <p><img src="doc_class/app/templates/images/devconfusion0.png" width="300"> <img src="doc_class/app/templates/images/confusion0.png" width="300">
 </p>
 Original codes are [trainNB.ipynb](README_resources/NaivBayes_trigram/trainNB.ipynb) and [loadNB.ipynb](README_resources/NaivBayes_trigram/loadNB.ipynb).
-![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `#f03c15`
+
+
 1. **Your code, is it understandable, readable and/or deployable?** 
 1. **Do you use industry best practices in training/testing/deploying?** No since I do not know the best practices.
 1. **Do you use modern packages/tools in your code and deployment pipeline like [this](https://stelligent.com/2016/02/08/aws-lambda-functions-aws-codepipeline-cloudformation/)?** I use EC2.
@@ -73,7 +74,11 @@ Original codes are [trainNB.ipynb](README_resources/NaivBayes_trigram/trainNB.ip
 
 ### References
 
-[^fn1] Li, Yezheng, Mar. 12th-14th, 2018, Webservice with training, development CSV uploads, http://ec2-18-222-104-42.us-east-2.compute.amazonaws.com/
+[^fn1] Li, Yezheng, Mar. 12th-14th, 2018, Webservice with training, development CSV uploads, http://ec2-18-222-104-42.us-east-2.compute.amazonaws.com/ 
+```diff
+- or the corresponding public DNS http://ec2-???-???-???-???.us-east-2.compute.amazonaws.com. I have already established one with [EC2-IPv4]18.222.104.42 with corresponding public DNS http://ec2-18-222-104-42.us-east-2.compute.amazonaws.com -- however, as I mentioned in step 1, it is not a free tier, please inform me when you finish reviewing my code and I will stop the current running instance (which later on will change its [EC2-IPv4].
++ 
+```
 
 [^fn2] Thompson, Ben, Mar 2015, Setting Up Flask on AWS, http://bathompso.com/blog/Flask-AWS-Setup/
 
