@@ -107,7 +107,8 @@ uwsgi ~/doc_class/uwsgi.ini
 - corresponding to [EC2-IPv4]. I have already established one with [EC2-IPv4] =18.216.141.107 
 - with corresponding public DNS http://ec2-18-216-141-107.us-east-2.compute.amazonaws.com
 - however, as I mentioned in step 1 of **tutorial for developer**, it is not a free tier, please 
-- inform me when you finish reviewing my code and I will stop the current running instance (which later on will change its [EC2-IPv4]). 
+- inform me when you finish reviewing my code and I will stop the current running instance
+- (which later on will change its [EC2-IPv4]). 
 - Public DNS be made non-dynamic -- just take time and I think it not quite important.  
 ```
 
