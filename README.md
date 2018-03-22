@@ -22,7 +22,7 @@ where two confusion matrices should be displayed as (and eventually I failed to 
 1. In a friendly browser, enter [^fn1].
 2. Since we have pretrained model in the instance, a user can just ignore two buttons in the first block and upload DEV/TEST CSV (of same format as the original training CSV) by two buttons in the second block of htmls (first block and second block are separated by ------------------------).
 3. Once the confusion matrices are shown (since I have problem locating local image files by html, they are presented by two same W3schools' image(s) from an online source), you are use newly appeared (four) buttons to download predicted labels and  image for confusion matrix of training CSV and DEV/TEST CSV.
-4. (Optional) If one want to change training CSV (the default pretrained model uses entire original CSV) so as to overwrite the pretained/ previous model, use first block's two buttons.
+4. (Optional) If one want to change training CSV (the default pretrained model uses entire original CSV) so as to overwrite the pretained/ previous model, use two buttons in the first block.
 ```diff
 - If you need to get back to the pretrained model,
 - (pretrained by the entire dataset, the classifier is ~44MB, reasonably small)
@@ -32,7 +32,7 @@ where two confusion matrices should be displayed as (and eventually I failed to 
 
 - For training dataset (first block), `devresult.csv` are true label/ predicted label's on random sample of one tenth of all training dataset (techinque is the fast reservoir sampling); confusion matrix `devconfusion.png` is the corresponding one.
 - For DEV/ TEST dataset (second block), `result.csv` is true label/ predicted label on random sample of one tenth of all training dataset (techinque is the fast reservoir sampling); confusion matrix `confusion.png` is the corresponding one.
-6. If you want to run on a TEST file (rather than a DEV file which have the true underlying label), maybe you can just label 'A' before every line to follow training CSV's format. In this case, ```restult.csv``` gives you the predicted labels; in this case, confusion matrix `confusion.png` does not make sense so just ignore it.
+6. If you want to run on a **truly** TEST CSV (that is, rather than a DEV CSV which has the true underlying label), maybe you can just label 'A' before every line to follow training CSV's format and then use two buttons in the second block. In this case, ```result.csv``` gives you the predicted labels for TEST CSV; just ignore confusion matrix `confusion.png` since it does not make sense.
 
 ### For developer: initial setup for deployment on AWS EC2 (Ubuntu)
 
