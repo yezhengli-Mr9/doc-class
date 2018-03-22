@@ -12,8 +12,9 @@ where two confusion matrices should be displayed as (and eventually I failed to 
 </p> 
 
 ```diff
-- with overall accuracy ~ 93.8%.
+- with overall accuracy ~ 93.8% and  original codes 
 ```
+[trainNB.ipynb](README_resources/NaivBayes_trigram/trainNB.ipynb) and [loadNB.ipynb](README_resources/NaivBayes_trigram/loadNB.ipynb).
 
 
 # Tutorial: for user and for developer
@@ -65,8 +66,9 @@ uwsgi ~/doc_class/uwsgi.ini
 <img src="doc_class/app/templates/images/devconfusion0.png" width="300"> <img src="doc_class/app/templates/images/confusion0.png" width="300">
 
 ```diff
-- With overall accuracy ~ 93.8%, original codes are [trainNB.ipynb](README_resources/NaivBayes_trigram/trainNB.ipynb) and [loadNB.ipynb](README_resources/NaivBayes_trigram/loadNB.ipynb).
+- with overall accuracy ~ 93.8% and original codes
 ```
+[trainNB.ipynb](README_resources/NaivBayes_trigram/trainNB.ipynb) and [loadNB.ipynb](README_resources/NaivBayes_trigram/loadNB.ipynb).
 
 **3. Your code, is it understandable, readable and/or deployable?** 
 
@@ -87,7 +89,11 @@ uwsgi ~/doc_class/uwsgi.ini
 
 [^fn1] Li, Yezheng, Mar. 12th-14th, 2018, Webservice with training, development CSV uploads, http://ec2-??-??-??-??.us-east-2.compute.amazonaws.com/ 
 ```diff
-- corresponding to [EC2-IPv4]. I have already established one with 18.216.141.107 with corresponding public DNS http://ec2-18-216-141-107.us-east-2.compute.amazonaws.com -- however, as I mentioned in step 1 of **tutorial for developer**, it is not a free tier, please inform me when you finish reviewing my code and I will stop the current running instance (which later on will change its [EC2-IPv4]). This can be made non-dynamic -- just take time and I think it not quite important.  
+- corresponding to [EC2-IPv4]. I have already established one with [EC2-IPv4] =18.216.141.107 
+- with corresponding public DNS http://ec2-18-216-141-107.us-east-2.compute.amazonaws.com
+- however, as I mentioned in step 1 of **tutorial for developer**, it is not a free tier, please 
+- inform me when you finish reviewing my code and I will stop the current running instance (which later on will change its [EC2-IPv4]). 
+- Public DNS be made non-dynamic -- just take time and I think it not quite important.  
 ```
 
 [^fn2] Thompson, Ben, Mar 2015, Setting Up Flask on AWS, http://bathompso.com/blog/Flask-AWS-Setup/
