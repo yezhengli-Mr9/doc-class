@@ -90,6 +90,7 @@ uwsgi ~/doc_class/uwsgi.ini
 **4. Do you use industry best practices in training/testing/deploying?** No since I do not know the best practices.
 
 **5. Do you use modern packages/tools in your code and deployment pipeline like [this](https://stelligent.com/2016/02/08/aws-lambda-functions-aws-codepipeline-cloudformation/)?** I use EC2.
+
 **6. The effectiveness of your demo, did you frame the problem and your approach to a solution, did you explain your thinking and any remaining gaps, etc?** 
 ```diff
 - File loading is time-consuming. 
