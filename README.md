@@ -87,7 +87,7 @@ uwsgi ~/doc_class/uwsgi.ini
 
 ### References
 
-[^fn1] Li, Yezheng, Mar. 12th-14th, 2018, Webservice with training, development CSV uploads, http://ec2-??-??-??-??.us-east-2.compute.amazonaws.com/ 
+[^fn1] Li, Yezheng, Mar. 12th-14th, 2018, Webservice with training, development CSV uploads, [http://ec2-??-??-??-??.us-east-2.compute.amazonaws.com/](http://ec2-18-216-141-107.us-east-2.compute.amazonaws.com)
 ```diff
 - corresponding to [EC2-IPv4]. I have already established one with [EC2-IPv4] =18.216.141.107 
 - with corresponding public DNS http://ec2-18-216-141-107.us-east-2.compute.amazonaws.com
