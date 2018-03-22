@@ -86,7 +86,8 @@ uwsgi ~/doc_class/uwsgi.ini
 ```diff
 - File loading is time-consuming. 
 + Much effort is spent on embedding my that much better but much slower model -- this should be one of the remaining gaps. 
-- Since I managed to make the classifier as small as ~20-44MB while keeping overall accuracy >90%, the original issue is solved.
+- Since I managed to make the classifier as small as ~20-44MB while keeping overall accuracy >90%, 
+- the original issue is solved.
 ```
 
 
@@ -94,7 +95,8 @@ uwsgi ~/doc_class/uwsgi.ini
 - the larger the size, the longer the time to upload (although a 273MB file is uploadable).
 - upload of training CSV is not necessary. 
 ```diff
--You can return to my near-optimal pretrained model by third button **Back to original model** in first block.
+- You can return to my near-optimal pretrained model by 
+- third button **Back to original model** in first block.
 ```
 
 
