@@ -22,7 +22,7 @@ where two confusion matrices should be displayed as (and eventually I failed to 
 ### For user: how to use webservice
 1. In a friendly browser, enter [^fn1].
 2. Since we have pretrained model in the instance, a user can just ignore two buttons in the first block and upload DEV/TEST CSV (of same format as the original training CSV) by two buttons in the second block of htmls (first block and second block are separated by ------------------------).
-3. Once the confusion matrices are shown (since I have problem locating local image files by html, they are presented by two same W3schools' image(s) from an online source), you are use newly appeared (four) buttons to download predicted labels and  image for confusion matrix of training CSV and DEV/TEST CSV.
+3. Once the confusion matrices are shown (since I have problem locating local image files by html, they are presented by two same W3schools' image(s) from an online source), use newly appeared (four) buttons to download predicted labels and PNG for confusion matrix of training CSV and DEV/TEST CSV.
 4. (Optional) If one want to change training CSV (the default pretrained model uses entire original CSV) so as to overwrite the pretained/ previous model, use two buttons in the first block.
 ```diff
 - If you need to get back to the pretrained model,
