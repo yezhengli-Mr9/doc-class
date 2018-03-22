@@ -113,9 +113,9 @@ uwsgi ~/doc_class/uwsgi.ini
 
 ### References
 
-[^fn1] Li, Yezheng, Mar. 12th-14th, **21th** 2018, Webservice with training, development CSV uploads, [http://ec2-??-??-??-??.us-east-2.compute.amazonaws.com/](http://ec2-18-216-141-107.us-east-2.compute.amazonaws.com)
+[^fn1] Li, Yezheng, Mar. 12th-14th, **21th** 2018, Webservice with training, development CSV uploads, [http://ec2-??-??-??-??.us-east-2.compute.amazonaws.com/](http://ec2-18-216-141-107.us-east-2.compute.amazonaws.com) corresponding to [EC2-IPv4]. 
 ```diff
-- corresponding to [EC2-IPv4]. I have already established one with [EC2-IPv4] =18.216.141.107 
+- I have already established one with [EC2-IPv4] =18.216.141.107 
 - with corresponding public DNS http://ec2-18-216-141-107.us-east-2.compute.amazonaws.com
 - however, as I mentioned in step 1 of **tutorial for developer**, it is not a free tier, please 
 - inform me when you finish reviewing my code and I will stop the current running instance
