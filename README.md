@@ -1,7 +1,7 @@
 # Document classification: a quick start
 ### Webservice with training and DEV/TEST CSV uploads
 
-I deployed on AWS EC2 (Ubuntu) a [webservice](https://ec2-18-222-104-42.us-east-2.compute.amazonaws.com/) with training and DEV/TEST CSV uploads[^fn1]. It initially appears
+I deployed on AWS EC2 (Ubuntu) a webservice with training and DEV/TEST CSV uploads[^fn1]. It initially appears
 <img src="README_resources/index_origin.png" width="600">
 
 and after uploading DEV/TEST CSV file:
@@ -10,7 +10,10 @@ and after uploading DEV/TEST CSV file:
 where two confusion matrices should be displayed as (and eventually I failed to display the two due to html's issue of locating images) : 
 <p> <img src="doc_class/app/templates/images/devconfusion0.png" width="300"> <img src="doc_class/app/templates/images/confusion0.png" width="300">
 </p> 
-with overall accuracy 93.8\%.
+
+```diff
+- with overall accuracy ~ 93.8%.
+```
 
 
 # Tutorial: for user and for developer
@@ -56,28 +59,35 @@ uwsgi ~/doc_class/uwsgi.ini
 
 ### Measurement Criteria
 
-1. **Does your webservice work?** Yes.
-1. **Is your hosted model as accurate as ours? Better? (think confusion matrix)** The NB model embedded in my webservice refers to ones in[^fn4] does not have promising confusion matrices:
-<p><img src="doc_class/app/templates/images/devconfusion0.png" width="300"> <img src="doc_class/app/templates/images/confusion0.png" width="300">
-</p>
-Original codes are [trainNB.ipynb](README_resources/NaivBayes_trigram/trainNB.ipynb) and [loadNB.ipynb](README_resources/NaivBayes_trigram/loadNB.ipynb).
+**1. Does your webservice work?** Yes.
 
+**2. Is your hosted model as accurate as ours? Better? (think confusion matrix)** The NB model embedded in my webservice refers to ones in[^fn4] but with trigrams and only focus on most frequent (70, 100 or 300) words:
+<img src="doc_class/app/templates/images/devconfusion0.png" width="300"> <img src="doc_class/app/templates/images/confusion0.png" width="300">
 
-1. **Your code, is it understandable, readable and/or deployable?** 
-1. **Do you use industry best practices in training/testing/deploying?** No since I do not know the best practices.
-1. **Do you use modern packages/tools in your code and deployment pipeline like [this](https://stelligent.com/2016/02/08/aws-lambda-functions-aws-codepipeline-cloudformation/)?** I use EC2.
-1. **The effectiveness of your demo, did you frame the problem and your approach to a solution, did you explain your thinking and any remaining gaps, etc?** Much effort is spent on embedding my that much better but much slower model -- this should be one of the remaining gaps. 
-1. **Are we able to run your testcases against your webservice? Can we run them against our webservice?** Yes. My test cases are in [doc_class/uploads/](doc_class/uploads/) where for example, `row160.csv` includes leading 160 lines of original csv. Upload specification appears in htmls of my webservice, notice
+```diff
+- With overall accuracy ~ 93.8%, original codes are [trainNB.ipynb](README_resources/NaivBayes_trigram/trainNB.ipynb) and [loadNB.ipynb](README_resources/NaivBayes_trigram/loadNB.ipynb).
+```
+
+**3. Your code, is it understandable, readable and/or deployable?** 
+
+**4. Do you use industry best practices in training/testing/deploying?** No since I do not know the best practices.
+
+**5. Do you use modern packages/tools in your code and deployment pipeline like [this](https://stelligent.com/2016/02/08/aws-lambda-functions-aws-codepipeline-cloudformation/)?** I use EC2.
+**6. The effectiveness of your demo, did you frame the problem and your approach to a solution, did you explain your thinking and any remaining gaps, etc?** 
+```diff
+- File loading is time-consuming.
++ Much effort is spent on embedding my that much better but much slower model -- this should be one of the remaining gaps. 
+```
+**7. Are we able to run your testcases against your webservice? Can we run them against our webservice?** Yes. My test cases are in [doc_class/uploads/](doc_class/uploads/) where for example, `row160.csv` includes leading 160 lines of original csv. Upload specification appears in htmls of my webservice, notice
 - the larger the size, the longer the time to upload (although a 273MB file is uploadable).
 - upload of training CSV is not necessary. If uploaded. CSV file should be big enough to have all labels/ targets appeared: in my test case, at least we have to have `row160.csv`. No corresponding requirements for DEV/TEST CSV, that is, `row10.csv`, `row20.csv`, etc. are fine to be DEV/TEST CSVs.
 
 
 ### References
 
-[^fn1] Li, Yezheng, Mar. 12th-14th, 2018, Webservice with training, development CSV uploads, http://ec2-18-222-104-42.us-east-2.compute.amazonaws.com/ 
+[^fn1] Li, Yezheng, Mar. 12th-14th, 2018, Webservice with training, development CSV uploads, http://ec2-??-??-??-??.us-east-2.compute.amazonaws.com/ 
 ```diff
-- or the corresponding public DNS http://ec2-???-???-???-???.us-east-2.compute.amazonaws.com. I have already established one with [EC2-IPv4]18.222.104.42 with corresponding public DNS http://ec2-18-222-104-42.us-east-2.compute.amazonaws.com -- however, as I mentioned in step 1, it is not a free tier, please inform me when you finish reviewing my code and I will stop the current running instance (which later on will change its [EC2-IPv4].
-+ 
+- corresponding to [EC2-IPv4]. I have already established one with 18.216.141.107 with corresponding public DNS http://ec2-18-216-141-107.us-east-2.compute.amazonaws.com -- however, as I mentioned in step 1 of **tutorial for developer**, it is not a free tier, please inform me when you finish reviewing my code and I will stop the current running instance (which later on will change its [EC2-IPv4]). This can be made non-dynamic -- just take time and I think it not quite important.  
 ```
 
 [^fn2] Thompson, Ben, Mar 2015, Setting Up Flask on AWS, http://bathompso.com/blog/Flask-AWS-Setup/
