@@ -12,7 +12,8 @@ where two confusion matrices should be displayed as (and eventually I failed to 
 </p> 
 
 ```diff
-- with overall accuracy ~ 93.8%, saved classifier of size at most 20~40MB (of course depending on training CSV) and original codes are here:
+- with overall accuracy ~ 93.8%, saved classifier of size at most 20~40MB 
+- (of course depending on training CSV) and original codes are here:
 ```
 [trainNB.ipynb](README_resources/NaivBayes_trigram/trainNB.ipynb) and [loadNB.ipynb](README_resources/NaivBayes_trigram/loadNB.ipynb).
 
@@ -94,7 +95,8 @@ uwsgi ~/doc_class/uwsgi.ini
 **6. The effectiveness of your demo, did you frame the problem and your approach to a solution, did you explain your thinking and any remaining gaps, etc?** 
 ```diff
 - File loading is time-consuming. 
-+ Much effort is spent on embedding my that much better but much slower model -- this should be one of the remaining gaps. 
++ Much effort is spent on embedding my that much better but much slower model 
++ -- this should be one of the remaining gaps. 
 - Since I managed to make the classifier as small as ~20-44MB while keeping overall accuracy >90%, 
 - the original issue is solved.
 ```
