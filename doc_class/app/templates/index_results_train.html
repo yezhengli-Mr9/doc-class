@@ -18,11 +18,17 @@
       </span>
 
     <input type="submit" value="Upload your training CSV and wait for the confusion matrix" class="btn btn-primary">
-  </form>
+  </form>  
+  </header>
 
+<header class="navbar">
+  <form action="/originTraining" method="post">
+    <button name="forwardBtn" type="submit"  class="btn btn-primary" onclick="back_to_original()" value="Back to original model" class="btn btn-primary">Back to original model</button>
+  </form>
   
   </header>
-<p> <img src="/images/devconfusion.png" alt="Confusion matrix"></img> </p>
+  
+<p> <img src="images\devconfusion.png" alt="Confusion matrix"></img> </p>
 
 <!--<p> <img src="http://localhost:5000/devconfusion.png" alt="Confusion matrix"></img>
 </p>

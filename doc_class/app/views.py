@@ -74,3 +74,12 @@ def download_image(filename):
 @app.route('/download4/<filename>')
 def download_csv(filename):
     return send_from_directory(directory = app.config['RESULT_FOLDER'],filename = filename)
+
+
+@app.route('/back_to_original')
+def hello_world():
+	filename = 
+	if os.isfile(): 
+		os.remove()
+    return render_template('index.html')
+
