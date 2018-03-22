@@ -28,6 +28,11 @@ where two confusion matrices should be displayed as (and eventually I failed to 
 - (pretrained by the entire dataset, the classifier is ~44MB, reasonably small)
 - notice there is a third button in first block called **Back to original model**.
 ```
+5. About results and confusion matrices:
+
+- For training dataset (first block), `devresult.csv` are true label/ predicted label's on random sample of one tenth of all training dataset (techinque is the fast reservoir sampling); confusion matrix `devconfusion.png` is the corresponding one.
+- For DEV/ TEST dataset (second block), `result.csv` is true label/ predicted label on random sample of one tenth of all training dataset (techinque is the fast reservoir sampling); confusion matrix `confusion.png` is the corresponding one.
+6. If you want to run on a TEST file (rather than a DEV file which have the true underlying label), maybe you can just label 'A' before every line to follow training CSV's format. In this case, ```restult.csv``` gives you the predicted labels; in this case, confusion matrix `confusion.png` does not make sense so just ignore it.
 
 ### For developer: initial setup for deployment on AWS EC2 (Ubuntu)
 
