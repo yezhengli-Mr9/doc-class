@@ -22,7 +22,7 @@ where two confusion matrices should be displayed as (and eventually I failed to 
 1. In a friendly browser, enter [^fn1].
 2. Since we have pretrained model in the instance, a user can just ignore two buttons in the first block and upload DEV/TEST CSV (of same format as the original training CSV) by two buttons in the second block of htmls (first block and second block are separated by ------------------------).
 3. Once the confusion matrices are shown (since I have problem locating local image files by html, they are presented by two same W3schools' image(s) from an online source), you are use newly appeared (four) buttons to download predicted labels and  image for confusion matrix of training CSV and DEV/TEST CSV.
-4. (Optional) If one want to change training CSV (the default pretrained model uses entire original CSV) so as to overwrite the pretained/ previous model, use first block's two buttons. Notice the training CSV needs to be big enough to include all labels/ targets -- in my testcases, at least we should have `row160.csv`.
+4. (Optional) If one want to change training CSV (the default pretrained model uses entire original CSV) so as to overwrite the pretained/ previous model, use first block's two buttons.
 ```diff
 - If you need to get back to the pretrained model,
 - (pretrained by the entire dataset, the classifier is ~44MB, reasonably small)
@@ -92,7 +92,10 @@ uwsgi ~/doc_class/uwsgi.ini
 
 **7. Are we able to run your testcases against your webservice? Can we run them against our webservice?** Yes. My test cases are in [doc_class/uploads/](doc_class/uploads/) where for example, `row160.csv` includes leading 160 lines of original csv. Upload specification appears in htmls of my webservice, notice
 - the larger the size, the longer the time to upload (although a 273MB file is uploadable).
-- upload of training CSV is not necessary. If uploaded. CSV file should be big enough to have all labels/ targets appeared: in my test case, at least we have to have `row160.csv`. No corresponding requirements for DEV/TEST CSV, that is, `row10.csv`, `row20.csv`, etc. are fine to be DEV/TEST CSVs.
+- upload of training CSV is not necessary. 
+```diff
+-You can return to my near-optimal pretrained model by third button **Back to original model** in first block.
+```
 
 
 ### References
