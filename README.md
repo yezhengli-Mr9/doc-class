@@ -12,7 +12,7 @@ where two confusion matrices should be displayed as (and eventually I failed to 
 </p> 
 
 ```diff
-- with overall accuracy ~ 93.8% and  original codes 
+- with overall accuracy ~ 93.8%, saved classifier of size at most 20~40MB (of course depending on training CSV) and original codes are here:
 ```
 [trainNB.ipynb](README_resources/NaivBayes_trigram/trainNB.ipynb) and [loadNB.ipynb](README_resources/NaivBayes_trigram/loadNB.ipynb).
 
